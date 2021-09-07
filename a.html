@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/select.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script><link type="text/css" rel="stylesheet" href="file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.css">
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+			});
+		</script>
+		
+		<script>
+			function checkRealname() {
+				var urname = document.getElementById("realname").value;
+				var urnameTip = document.getElementById("realnameTip");
+				var reg = /^[\u4e00-\u9fa5]{2,4}$/;
+				if(!reg.test(urname)) {
+					urnameTip.innerHTML="主讲人不合法！";
+					urnameTip.style="color:red";
+				} else {
+					urnameTip.innerHTML="";
+				}
+			}
+			
+			function checkTopic() {
+				var utopic = document.getElementById("topic").value;
+				var utopicTip = document.getElementById("topicTip");
+				var reg = /^[\u4e00-\u9fa5 a-z A-Z]{1,50}$/;
+				if(!reg.test(utopic)) {
+					utopicTip.innerHTML="技术专题不合法！";
+					utopicTip.style="color:red";
+				} else {
+					utopicTip.innerHTML="";
+				}
+			}
+			
+			function checkPhone1() {
+				var uphonenum1 = document.getElementById("phonenum1").value;
+				var uphonenum1Tip = document.getElementById("phonenum1Tip");
+				var reg = /^[0-9]{11}$/;
+				if(!reg.test(uphonenum1)) {
+					uphonenum1Tip.innerHTML="电话号不合法！";
+					uphonenum1Tip.style="color:red";
+				} else {
+					uphonenum1Tip.innerHTML="";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">录入公开课</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+
+			<div id="tab1" class="tabson">
+				<ul class="forminfo">
+					<li><label>日期<b>*</b></label>
+						<input name="Input" type="date" class="dfinput" style="width:345px;">
+					</li>
+					
+					<li><label>技术专题<b>*</b></label>
+						<input placeholder="字母和汉字组合，1-50 个字符" id="topic" onblur="checkTopic()" name="Input" type="text" class="dfinput" style="width:345px;">
+						<i id="topicTip"></i>
+					</li>
+					<li>
+						<label>主讲人<b>*</b></label>
+						<input id="realname" onblur="checkRealname()" placeholder="2-4个汉字" name="classid" type="text" class="dfinput" style="width:345px;">
+						<i id="realnameTip"></i>
+					</li>
+					<li>
+						<label>组织人<b>*</b></label>
+						<input placeholder="可填写多人用‘，’分隔" name="classid" type="text" class="dfinput" style="width:345px;">
+					</li>
+					<li>
+						<label>地点<b>*</b></label>
+						<input placeholder="请输入地点" name="classid" type="text" class="dfinput" style="width:345px;">
+					</li>
+					<li>
+						<label>群体说明<b>*</b></label>
+						<input placeholder="请输入群体说明" name="classid" type="text" class="dfinput" style="width:345px;">
+					</li>
+					<li>
+						<label>方式<b>*</b></label><cite>
+							<input name="sex1" type="radio" value="" checked="checked">线下&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="sex1" type="radio" value="">直播&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="sex1" type="radio" value="">录播</cite>
+					</li>
+					<li>
+						<label>创新学分值<b>*</b></label>
+						<input placeholder="请输入创新学分值" name="classid" type="text" class="dfinput" style="width:345px;">
+					</li>
+					<li>
+						<label>参加人数<b>*</b></label>
+						<input placeholder="请输入参加人数" name="classid" type="text" class="dfinput" style="width:345px;">
+					</li>
+					
+					
+					
+					<li><label>备注<b style="color: black;">*</b></label>
+
+						<table cellpadding="0" cellspacing="0" border="0" class="ke-container" style="width: 700px; height: 250px;"><tbody><tr><td class="ke-toolbar-outer"><table cellpadding="0" cellspacing="0" border="0" class="ke-toolbar"><tbody><tr><td><table cellpadding="0" cellspacing="0" border="0" class="ke-toolbar-table"><tbody><tr><td><a class="ke-icon" href="javascript:;" title="切换模式"><span class="ke-common-icon ke-icon-source" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="预览"><span class="ke-common-icon ke-icon-preview" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="全屏显示"><span class="ke-common-icon ke-icon-fullscreen" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="后退(Ctrl+Z)"><span class="ke-common-icon ke-icon-undo" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="前进(Ctrl+Y)"><span class="ke-common-icon ke-icon-redo" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="打印"><span class="ke-common-icon ke-icon-print" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="剪切(Ctrl+X)"><span class="ke-common-icon ke-icon-cut" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="复制(Ctrl+C)"><span class="ke-common-icon ke-icon-copy" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="粘贴(Ctrl+V)"><span class="ke-common-icon ke-icon-paste" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="粘贴为无格式文本"><span class="ke-common-icon ke-icon-plainpaste" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="从Word粘贴"><span class="ke-common-icon ke-icon-wordpaste" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="左对齐"><span class="ke-common-icon ke-icon-justifyleft" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="居中"><span class="ke-common-icon ke-icon-justifycenter" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="右对齐"><span class="ke-common-icon ke-icon-justifyright" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="两端对齐"><span class="ke-common-icon ke-icon-justifyfull" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="编号"><span class="ke-common-icon ke-icon-insertorderedlist" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="项目符号"><span class="ke-common-icon ke-icon-insertunorderedlist" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="增加缩进"><span class="ke-common-icon ke-icon-indent" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="减少缩进"><span class="ke-common-icon ke-icon-outdent" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="下标"><span class="ke-common-icon ke-icon-subscript" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="上标"><span class="ke-common-icon ke-icon-superscript" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入当前日期"><span class="ke-common-icon ke-icon-date" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入当前时间"><span class="ke-common-icon ke-icon-time" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td></tr><tr><td></td></tr></tbody></table><table cellpadding="0" cellspacing="0" border="0" class="ke-toolbar-table"><tbody><tr><td><a class="ke-icon" href="javascript:;" title="标题"><span class="ke-common-icon ke-icon-title" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="字体"><span class="ke-common-icon ke-icon-fontname" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="文字大小"><span class="ke-common-icon ke-icon-fontsize" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="文字颜色"><span class="ke-common-icon ke-icon-textcolor" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="文字背景"><span class="ke-common-icon ke-icon-bgcolor" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="粗体"><span class="ke-common-icon ke-icon-bold" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="斜体"><span class="ke-common-icon ke-icon-italic" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="下划线"><span class="ke-common-icon ke-icon-underline" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="删除线"><span class="ke-common-icon ke-icon-strikethrough" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="删除格式"><span class="ke-common-icon ke-icon-removeformat" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="全选"><span class="ke-common-icon ke-icon-selectall" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入图片"><span class="ke-common-icon ke-icon-image" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入Flash"><span class="ke-common-icon ke-icon-flash" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入多媒体"><span class="ke-common-icon ke-icon-media" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入层"><span class="ke-common-icon ke-icon-layer" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入表格"><span class="ke-common-icon ke-icon-table" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入特殊字符"><span class="ke-common-icon ke-icon-specialchar" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入横线"><span class="ke-common-icon ke-icon-hr" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="插入笑脸"><span class="ke-common-icon ke-icon-emoticons" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="超级连接"><span class="ke-common-icon ke-icon-link" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="取消超级连接"><span class="ke-common-icon ke-icon-unlink" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td><td><a class="ke-icon" href="javascript:;" title="关于"><span class="ke-common-icon ke-icon-about" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></a></td></tr><tr><td></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="ke-textarea-outer"><table cellpadding="0" cellspacing="0" border="0" class="ke-textarea-table" style="height: 190px;"><tbody><tr><td><iframe class="ke-iframe" frameborder="0" style="height: 190px;"></iframe><textarea class="ke-textarea" style="display: none; height: 190px;"></textarea></td></tr></tbody></table></td></tr><tr><td class="ke-bottom-outer"><table class="ke-bottom" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="ke-bottom-left"></td><td class="ke-bottom-right"><span class="ke-bottom-right-img" style="background-image: url(&quot;file:///C:/Users/%E6%9D%8E%E5%98%89%E5%AE%81/AppData/Local/Temp/HZ$D.699.4080/HZ$D.699.4089/UOLabNUC2020/editor/skins/default.gif&quot;);"></span></td></tr></tbody></table></td></tr></tbody></table><textarea id="content7" name="content" style="width: 700px; height: 250px; visibility: hidden; display: none;"></textarea>
+					</li>
+					<li><label>&nbsp;</label><input name="" type="button" class="btn" value="保存"></li>
+				</ul>
+
+			</div>
+
+			<script type="text/javascript">
+				$("#usual1 ul").idTabs();
+			</script>
+
+			<script type="text/javascript">
+				$('.tablelist tbody tr:odd').addClass('odd');
+			</script>
+
+		</div>
+
+	
+
+<div style="display: none;"></div><div class="ke-mask" style="opacity: 0.5;"></div></body></html>
